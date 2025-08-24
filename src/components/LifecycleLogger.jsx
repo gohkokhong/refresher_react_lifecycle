@@ -10,7 +10,7 @@ const LifecycleLogger = () => {
     // componentWillUnmount
     return () => {
       console.log('Component unmount...');
-    };
+    }
   }, []);
 
   // componentDidUpdate
@@ -18,21 +18,17 @@ const LifecycleLogger = () => {
     if (count > 0) {
       console.log('Component updated...', count);
     }
-  }, [count]);
+  }, [count])
 
   const incrementCount = () => {
     setCount((prevCount) => prevCount + 1);
-  };
+  }
 
-  return (
-    <div className='logger-container'>
-      <h2>LifecycleLogger (Function Component)</h2>
-      <p>Count: {count}</p>
-      <button onClick={incrementCount} className='secondary-btn'>
-        Update
-      </button>
-    </div>
-  );
-};
+  return (<div className="logger-container">
+    <h2>LifecycleLogger (Function Component)</h2>
+    <p>Count: {count}</p>
+    <button onClick={incrementCount} className='secondar-btn'>Update</button>
+  </div>);
+}
 
 export default LifecycleLogger;
